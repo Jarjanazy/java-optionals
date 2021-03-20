@@ -1,3 +1,5 @@
+package nonOptional;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
