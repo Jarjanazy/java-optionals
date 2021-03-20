@@ -2,8 +2,11 @@ package nonOptional;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-@Getter @AllArgsConstructor
+@Getter @AllArgsConstructor @RequiredArgsConstructor
 public class Room {
-    private final Desk desk;
+    private Desk desk;
+    private final int number;
 }

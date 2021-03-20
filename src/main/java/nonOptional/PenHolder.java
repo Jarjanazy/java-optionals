@@ -2,8 +2,11 @@ package nonOptional;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-@AllArgsConstructor @Getter
+@AllArgsConstructor @Getter @RequiredArgsConstructor
 public class PenHolder {
-    private final Pen pen;
+    private Pen pen;
+    private final int capacity;
 }
