@@ -3,7 +3,9 @@ import nonOptional.PenHolder;
 import nonOptional.Room;
 import org.junit.jupiter.api.Test;
 import static nonOptional.FetchingService.getCapacityOfPenHolder;
+import static nonOptional.FetchingService.getCapacityOfPenHolder_NoNullCheck;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class NonOptionalsTest {
     @Test
@@ -37,6 +39,12 @@ public class NonOptionalsTest {
         Room room = new Room(desk,9);
         int result = getCapacityOfPenHolder(room);
         assertEquals(50, result);
+    }
+
+    @Test
+    void givenARoomWithNoDesk_ThrowNullPointerException(){
+        Room room = new Room(4);
+        assertThrows(NullPointerException.class,() -> getCapacityOfPenHolder_NoNullCheck(room));
     }
 
 }
