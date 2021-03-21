@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static nonOptional.FetchingService.getCapacityOfPenHolder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NonOptionals {
+public class NonOptionalsTest {
     @Test
     void givenARoomWithNoDesk_PenHolderCapacityIs0(){
         Room room = new Room(5);
